@@ -12,7 +12,7 @@
 -(id)init {
     if ((self = [super init])) {
         // Initialize any arrays, dictionaries, etc in here
-        self.instructions = @"These are the game instructions :D";
+        self.instructions = @"Hit the blocks to change them to cubes be careful not to miss or you may die.";
     }
     return self;
 }
@@ -22,6 +22,7 @@
     
     // We're calling a public method of the character that tells it to jump!
     [self.hero jump];
+    
 }
 
 -(void)onEnter {
@@ -46,5 +47,18 @@
     return (MyCharacter *)self.character;
 }
 // DO NOT DELETE!
+
+
+
+-(void)launchup {
+    CCLOG(@"up button pressed");
+    [self.hero jumpup];
+}
+
+-(void)launchdown {
+    CCLOG(@"Stomp button pressed");
+    
+    [self.hero jumpdown];
+}
 
 @end

@@ -98,4 +98,11 @@
     self.physicsBody.velocity = ccp(0,122);
 }
 
+-(void)jumpup {
+    self.physicsBody.velocity = ccp(10,200);
+}
+
+-(void)jumpdown {
+    self.physicsBody.velocity = ccp(0 ,-170);
+}
 @end
